@@ -74,6 +74,8 @@ $(function () {
         }
     });
 
+    
+
     //s4영역 scrollTrigger 애니메이션
     gsap.registerPlugin(ScrollTrigger);
 
@@ -524,12 +526,15 @@ $(function () {
             $("nav").animate({
                 right:0
             });
+            $("html, body").addClass("not_scroll");
+
         });
         //모바일 버전 close-btn 클릭하면 nav 사라짐
         $("#close-btn").click(function(){
             $("nav").animate({
                 right:"-100%"
             });
+            $("html, body").removeClass("not_scroll");
         });
     }
 
