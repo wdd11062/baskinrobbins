@@ -180,12 +180,15 @@ header .mobile-top-menu { display: none; }
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    position: relative;
 }
-.s1 .movie::after {
+.s1 .movie::before {
     content: "";
     width: 100%;
     height: 100%;
     background-color: #ca633b;
+    position: absolute;
+    opacity: 0;
 }
 .s1 .movie iframe {
     width: 100%;
@@ -1474,7 +1477,7 @@ footer .top-btn.fixed {
 
 /* 모바일 버전 미디어 쿼리 */
 @media screen and (max-width:480px) {
-    
+
     /* 모바일 메뉴 바디에 스크롤 막는 방법 */
     .not_scroll{
         position: fixed;
